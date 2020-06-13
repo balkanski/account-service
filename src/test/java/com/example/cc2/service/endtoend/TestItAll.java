@@ -101,7 +101,7 @@ public class TestItAll {
                 .build();
 
 
-        mockMvc.perform(patch("/accounts").contentType("application/json").content(objectMapper.writeValueAsString(AccountDO.fromAccount(patchedAccount))))
+        mockMvc.perform(put("/accounts").contentType("application/json").content(objectMapper.writeValueAsString(AccountDO.fromAccount(patchedAccount))))
                 .andDo(print()).andExpect(status().isOk());
 
         mockMvc.perform(get("/accounts").contentType("application/json"))

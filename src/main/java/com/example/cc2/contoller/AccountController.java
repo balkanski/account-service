@@ -58,7 +58,7 @@ public class AccountController {
         }
     }
 
-    @PatchMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity editAccount(@RequestBody AccountDO accountDO){
         try {
             accountService.editAccount(accountDO.toAccount());

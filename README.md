@@ -38,7 +38,7 @@ There are 4 available endpoints:
 POST /accounts
 GET /accounts
 DELETE /accounts/{uuid}
-PATCH /account
+PUT /account
 ```
 
 The POST endpoint expects a JSON as body in the following format:
@@ -69,7 +69,7 @@ The GET endpoint returns a list of JSON objects, e.g.
 
 The DELETE endpoint uses a path variable which should be the unique identifier of the object to be deleted.
 
-The PATCH endpoint expects a JSON in the following format:
+The PUT endpoint expects a JSON in the following format:
 ```json
 {
         "uuid": "73a00f51-9b48-4fb5-a007-22e9990d654d",
